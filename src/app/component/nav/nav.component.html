@@ -1,0 +1,26 @@
+<nav>
+    <h3 (click)="pageUp()" [className]="logoClass">
+        Ezhar.ans
+    </h3>
+    <ul >
+        <li *ngFor="let l of navlinks">
+            <a [href]=" l.link ">{{ l.name }}</a>
+        </li>
+        <li (click)="hamburgerMenu()">
+            <mat-icon class="mobile-menu" width="30" height="30">menu</mat-icon>
+        </li>
+    </ul>
+</nav>
+
+<!--  mobile nav  -->
+<div [ngClass]="{'mobile-nav': true, 'open-menu': hamburger, 'closed-menu': !hamburger}">
+    <span (click)="hamburgerMenu()">
+        <mat-icon width="30" height="30">close</mat-icon>
+    </span>
+    <ul >
+        <li *ngFor="let l of navlinks" (click)="hamburgerMenu()">
+            <a [href]=" l.link ">{{ l.name }}</a>
+        </li>
+    </ul>
+</div>
+

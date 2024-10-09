@@ -1,5 +1,5 @@
-@use "global_style/colors.scss" as *;
-@use "global_style/typography.scss" as *;
+@use "./colors" as *;
+@use "./typhography" as *;
 
 * {
   box-sizing: border-box;

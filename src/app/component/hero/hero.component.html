@@ -1,0 +1,45 @@
+<section id="home" class="hero">
+    <div class="container">
+        <div class="content">
+            <div class="hero-main">
+                <div class="hero-text">
+                    <h1>Full-Stack Developer</h1>
+                    <img src="/assets/images/waving.png" alt="waving_hand"/>
+                    <p>
+                        Hi, I'm Md. Ezhar Ansari. A passionate Full-Stack
+                        Developer based in Kolkata, India. 📍
+                    </p>
+                    <span>
+                        <a
+                          aria-label="github"
+                          rel="noreferrer"
+                          target="_blank"
+                          href="https://github.com/EzharAnsari"
+                        >
+                          <fa-icon [icon]="github_icon" width="32" height="32"></fa-icon>
+                        </a>
+                        <a
+                          aria-label="linkedin"
+                          rel="noreferrer"
+                          target="_blank"
+                          href="https://www.linkedin.com/in/md-ezhar-ansari-42b441151/"
+                        >
+                          <fa-icon [icon]="linkdin_icon" width="32" height="32"></fa-icon>
+                        </a>
+                      </span>
+                </div>
+                <div class="hero-img"></div>
+            </div>
+            <div class="skills">
+              <p>Tech Stack</p>
+              <div class="logos">
+                <ul>
+                    <li *ngFor="let skill of skillsIcons">
+                      <img src= {{skill.img}} alt="skill-icon" />
+                    </li>
+                </ul>
+              </div>
+            </div>
+        </div>
+    </div>
+</section>
